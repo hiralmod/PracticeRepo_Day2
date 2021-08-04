@@ -2,7 +2,7 @@
   <head>
     <style>
         .required {
-            color: red;
+            color: #B00502;
         }
     </style>
   </head>
@@ -40,7 +40,15 @@
             <b>Password.::</b>
             <span class="required">*</span>
             <input type="password" name="strPasswd" id="strPassword" placeholder="enter your password">
-            <br />
+            <div id="message">
+          <h3 style="color:red">Password must contain the following:</h3>
+
+             <p style="color:red" id="letter" class="invalid">A <b>lowercase</b> letter</p>
+            <p style="color:red" id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+            <p style="color:red" id="number" class="invalid">A <b>number</b></p>
+            <p style="color:red" id="length" class="invalid">Minimum <b>8 characters</b></p>
+          </div>
+             <br />
             <br />
             <b>Address::</b>
             <span class="required">*</span>
@@ -75,7 +83,7 @@
             <br />
             <b>Profile::</b>
             <input type="file" id="Profile"/>
-            <button type="button" style="font-size:20px" onclick="Submit()">Submit</button>
+            <button class="btn sub-btn" type="submit" style="font-size:20px" onclick="Submit()">Submit</button>
             <button type="button" style="font-size:20px">Clear</button>
         </div>
     </form>
